@@ -1,0 +1,13 @@
+// use prisma-8
+
+model Task {
+    id          Int       @id @default(autoincrement())
+    title       String
+    description String?
+    dateTime    DateTime
+    endTime     DateTime?
+    priority    String?
+    status      String    @default("open")
+    createdAt   DateTime  @default(now())
+    updatedAt   DateTime  @onCreate(now()) @onUpdate(now())
+}

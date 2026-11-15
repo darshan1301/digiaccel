@@ -1,0 +1,6 @@
+
+.env
+/.alchemy
+/.prisma-composer
+node_modules
+.next/

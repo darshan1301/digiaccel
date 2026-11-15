@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: digiaccel-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: digiaccel
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+
+volumes:
+  pgdata:
+
