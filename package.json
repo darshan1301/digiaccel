@@ -7,6 +7,7 @@
   "scripts": {
     "build": "next build",
     "seed": "tsx --env-file=.env src/prisma/seed.ts",
+"build:prod": "prisma contract emit && prisma db migrate && next build",
     "composer:deploy": "prisma deploy",
     "composer:dev": "prisma dev",
     "contract:emit": "prisma contract emit",
